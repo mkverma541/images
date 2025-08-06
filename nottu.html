@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You've Been Invited to GECK Early Access</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Reset styles for email clients */
+        body,
+        table,
+        td,
+        p,
+        a,
+        li,
+        blockquote {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        table,
+        td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+        }
+
+        /* Base styles */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #D5D5D5;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.4;
+        }
+
+        .email-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: #0F0F0F;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main-headline-section {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 30px;
+            margin-bottom: 80px;
+        }
+
+        /* Background wave patterns */
+        .wave-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 0;
+            height: 375px;
+
+        }
+
+        /* Header banner */
+        .header-banner {
+            background-color: #DFDFDF;
+            padding: 5px 8px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 12px;
+            color: #000000;
+            font-weight: 400;
+            justify-content: center;
+        }
+
+        .header-icon {
+            width: 16px;
+            height: 16px;
+            background: linear-gradient(135deg, #FE7743, #FF8A5C);
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 2px 4px rgba(254, 119, 67, 0.3);
+        }
+
+        /* Logo section */
+        .logo-section {
+            text-align: center;
+            padding: 70px 24px 0px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo {
+            font-size: 48px;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .tagline {
+            font-size: 16px;
+            color: #9CA3AF;
+            margin-bottom: 24px;
+            font-weight: 400;
+        }
+
+        .main-headline {
+            font-size: 75px;
+            font-weight: 700;
+            color: #FE7743;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        .sub-headline {
+            font-size: 20px;
+            color: #989898;
+        }
+
+        /* Content sections */
+        .content-section {
+            padding: 0 24px 32px;
+            position: relative;
+            z-index: 2;
+            margin-top: 80px;
+        }
+
+        .outer-container {
+            padding: 0 24px 0px;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .inner-container {
+            padding-left: 24px;
+            padding-right: 24px;
+            padding-bottom: 24px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            margin: 32px 0 5px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #ffffff;
+        }
+
+
+        .bullet-list {
+            margin: 0px 0;
+            padding-left: 20px;
+        }
+
+
+        /* Contact section */
+        .contact-section {
+            margin: 32px 24px 10px;
+        }
+
+        .contact-button {
+            display: inline-flex;
+            background: linear-gradient(135deg, #FE7743, #FF8A5C);
+            color: #FFFFFF;
+            padding: 15px 24px;
+            text-decoration: none;
+            border-radius: 55px;
+            margin-top: 12px;
+            box-shadow: 0 4px 12px rgba(254, 119, 67, 0.3);
+            transition: all 0.2s ease;
+            gap: 6px;
+        }
+
+        .contact-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(254, 119, 67, 0.4);
+        }
+
+        /* CTA button */
+        .cta-section {
+            text-align: center;
+            padding: 32px 24px 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            background-color: #FFFFFF;
+            color: #000000;
+            padding: 16px 32px;
+            text-decoration: none;
+            border-radius: 60px;
+            font-size: 16px;
+            border: 2px solid #000000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (max-width: 580px) {
+            body {
+                font-size: 14px;
+            }
+
+            .main-headline {
+                font-size: 40px;
+            }
+
+            .section-title {
+                font-size: 18px;
+            }
+
+            .sub-headline {
+                font-size: 15px;
+            }
+
+            .inner-container {
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+
+            .outer-container {
+                padding: 0 18px 0px;
+            }
+
+            .content-section {
+                padding: 0 15px 32px;
+
+            }
+
+            .contact-button {
+                padding: 12px 15px;
+            }
+
+            .cta-button {
+                padding: 12px 25px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="email-container">
+
+
+        <div style="text-align: center;">
+            <img src="top.png" alt="" style=" width: 100%; height: auto; ">
+        </div>
+
+
+        <div class="outer-container">
+            <div class="inner-container">
+
+                <!-- Main Content -->
+                <div class="content-section">
+                    <div class="greeting">
+                        Hi [First Name],
+                    </div>
+                    <br>
+
+                    <div class="section-content">
+                        Thanks for signing up.
+                    </div>
+                    <br>
+
+                    <div class="section-content">
+                        We're excited have on onboard to Nottu — our AI-powered flashcard maker.
+                    </div>
+                    <br>
+
+                    <div class="section-content">
+                        This is a private build shared only with a small group of experienced and trusted individuals, and we're genuinely thrilled to have your eyes on it.
+                    </div>
+
+
+                    <!-- What is GECK Section -->
+                    <div class="section-title">
+                        <div class="section-icon">
+                            <img src="eyes.png" alt="" style="width: 24px; height: 24px;">
+                        </div>
+                        Nottu is still in early stages.
+                    </div>
+
+                    <div class="section-content">
+                        Expect a few bugs, rough edges, and rapid improvements. That’s exactly why you’re here: to help
+                        us shape Nottu into something truly useful.
+                        Here’s what you can do:
+                    </div>
+
+                    <ul class="bullet-list">
+                        <li>Try out all the features — record, summarize, make flashcards, test yourself, go wild.</li>
+                        <li>Share your feedback anytime , whether something’s broken, confusing, or just really cool.
+                        </li>
+                        <li> Use it as you would in real life , we want to see how you actually use it.
+                        </li>
+                    </ul>
+
+                 
+
+                    <!-- Quick Heads-Up Section -->
+                    <div class="section-title">
+                        <div class="section-icon">
+                            <img src="construction.png" alt="" style="width: 24px; height: 24px;">
+                        </div>
+                        A Quick Heads-Up
+                    </div>
+
+                    <div class="section-content">
+                        Nottu is still in active development, so we kindly ask:
+                    </div>
+
+                    <ul class="bullet-list">
+                        <li>Confidentiality, please!</li>
+                        <li>Don't post or share anything about Nottu on social media or public forums</li>
+                        <li>The UI, logic, and features are evolving rapidly — and your input fuels that change</li>
+                        <li>Be patient — and gentle. This app is still growing.</li>
+                    </ul>
+
+                    <!-- Feedback Section -->
+                    <div class="section-title">
+                        <div class="section-icon">
+                            <img src="handshake.png" alt="" style="width: 24px; height: 24px;">
+                        </div>
+                        Got Feedback? We Want It.
+                    </div>
+
+                    <div class="section-content">
+                        Your experience helps shape Nottu. Whether it's a bug, a confusing moment, or a surprisingly
+                        magical
+                        feature — we want to hear it.
+                    </div>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="contact-section">
+                    <div class="section-title">
+                        <div class="section-icon">
+                            <img src="waiving-hand.png" alt="" style="width: 24px; height: 24px;">
+                        </div>
+                        Feel free to contact us at:
+                    </div>
+                    <a href="mailto:team@nottu.ai" class="contact-button">
+                        <img src="envelope.png" alt="" style="width: 24px; height: 24px;">
+                        team@nottu.ai</a>
+                </div>
+
+                <!-- Closing -->
+                <div class="content-section" style="margin-top: 30px;">
+                    <div class="section-content">
+                        Thanks again for being part of this early chapter.
+                    </div>
+                    <br>
+
+                    <div class="section-content">
+                        We're building Nottu with people like you in mind — curious, thoughtful, and forward-looking
+                        people
+                        who care about learning.
+                    </div>
+
+                    <div class="section-content" style="margin-top: 24px;">
+                        With gratitude,<br>
+                        — Team Nottu
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="cta-section">
+                    <a href="https://nottu.ai" class="cta-button">
+                        <img src="browser.png" alt="" style="width: 24px; height: 24px;">
+                        Visit Nottu</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
